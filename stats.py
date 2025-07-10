@@ -18,3 +18,7 @@ def get_book_lettercount(filepath):  # Function to count the letters in the book
         text= text.lower()  # Convert the text to lowercase for uniformity
         letter_count_value = letter_count(text) # Call the letter_count function to count letters in the text
     return letter_count_value  # Return the letter count value
+
+def sort_letter_count(letter_count_value):  # Function to sort the letter count dictionary
+    sorted_letter_count = sorted(letter_count_value.items(), key=lambda x: x[1], reverse=True)  # Sort by count in descending order
+    return sorted_letter_count  # Return the sorted letter count list
